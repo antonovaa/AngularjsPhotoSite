@@ -1,0 +1,18 @@
+<!doctype html>
+<html ng-app="questApp">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/mystyles.css" />
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/lib/angular-route.min.js"></script>
+
+</head>
+<body>
+<nav><a href="#!question">Вопрос</a>|<a href="#!answer">Ответить</a></nav>
+<ng-view></ng-view>
+<script src="appModule.js"></script>
+<script src="dataService.js"></script>
+<script src="js/controllers/QuestionController.js"></script>
+<script src="js/controllers/AnswerController.js"></script>
+</body>
+</html>
