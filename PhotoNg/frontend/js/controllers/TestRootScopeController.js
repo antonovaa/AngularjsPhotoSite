@@ -11,25 +11,7 @@ ModuleApp.controller('TestRootScopeController', function ($scope, $rootScope, $h
         };
 
         $scope.loadList2 = function () {
-
-            // var request = $http({
-            //     method: "post",
-            //     url: "../backend/info.php",
-            //     data: {
-            //         email: "test3",
-            //         pass: "test33"
-            //     },
-            //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-            // });
-            //
-            // /* Check whether the HTTP Request is successful or not. */
-            // request.success(function (data) {
-            //     document.getElementById("message").textContent = "You have login successfully with email "+data;
-            //     $scope.historyNg2 = "../images/test1/"+data.data;
-            // });
-
             var dir="test1";
-
             $http
                 .post(
                     '../backend/info.php',
@@ -40,11 +22,6 @@ ModuleApp.controller('TestRootScopeController', function ($scope, $rootScope, $h
                         $scope.historyNg2.push("../images/"+dir+"/"+fj);
                     });
                 })
-            //     .error(function (response) {
-            //    console.log(response);
-            // });
-
-
         };
 // загрузка списка
         $scope.loadList2();

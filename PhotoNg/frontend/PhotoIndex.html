@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="includeExample">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css">
+    <!--<link href="css/lib/bootstrap-grid.min.css">-->
+    <link rel="stylesheet" href="css/MyStyle.css">
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/controllers/ModuleApp.js"></script>
+    <script src="js/controllers/HeaderController.js"></script>
+    <script src="js/controllers/NavigationController.js"></script>
+    <script src="js/controllers/MainController.js"></script>
+    <!--<script src="js/controllers/TestRootScopeController.js"></script>-->
+</head>
+<body>
+
+<div ng-controller="HeaderController">
+        <div ng-include="'Header.html'" class="fixed-top" style="height: 100px;border: 2px solid rebeccapurple;background: #ffffff"></div>
+</div>
+
+<div ng-controller="NavigationController">
+    <div ng-include="'Navigation.html'" class="fixed-top" style="margin-top: 100px"></div>
+</div>
+
+<div ng-controller="MainController">
+    <div ng-include="'Main.html'" ></div>
+</div>
+
+</body>
+</html>

@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link href="css/lib/bootstrap.min.css">
     <link href="css/MyStyle.css">
     <script src="js/lib/angular.min.js"></script>
     <script src="js/controllers/ModuleApp.js"></script>
@@ -10,6 +12,8 @@
     <script src="js/controllers/TestRootScopeController.js"></script>
 </head>
 <body>
+
+
 <h1>Цитатник Мао</h1>
 <div ng-controller="TestRootScopeController">
 <p>Модуль: {{ mod2 }}</p>
@@ -23,13 +27,11 @@
     <div ng-repeat="imgs in historyNg2 track by $index" >
         <img src="{{imgs}}" style="width: 1000px">
     </div>
-    <!--<img src="../images/test1/3i98wOfNilw.jpg">-->
 </div>
 
 <p>Модуль: {{ mod2 }}</p>
 <p>Сообщение: {{ mod }}</p>
 
-<!-- ПОДКЛЮЧАЕМ КОНТРОЛЛЕР fraseManager -->
 <div ng-controller="TestSendController">
     <label>Добавьте цитату:</label><br />
     <input type="text" name="name" ng-model="text" required><br />
@@ -40,12 +42,8 @@
     </p>
     <p>Модуль: {{ moduleName2 }}</p>
     <p>Сообщение: {{ modtest }}</p>
-
 </div>
 <p>Модуль: {{ mod2 }}</p>
 <p>Сообщение: {{ mod }}</p>
-
-
-
 </body>
 </html>
