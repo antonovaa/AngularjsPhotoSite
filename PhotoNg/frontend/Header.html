@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid ">
     <div class="row ">
         <div class="col-3">
             <div class="clearfix">
@@ -12,11 +12,15 @@
             <button ng-click="changeMain(4)" class="align-middle btn btn-secondary">Прайс лист</button>
             <button ng-click="changeMain(5)" class="align-middle btn btn-secondary">Акции</button>
             <button ng-click="changeMain(6)" class="align-middle btn btn-success">Еще раз Акции</button>
-
         </div>
         <div class="col-2 text-right align-self-end">
 
-            <button class="justify-content-center align-self-center btn btn-primary">Контакты</button>
+            <button type="button" class="btn btn-primary" ng-click="visibleModal(1)">
+                Контакты
+            </button>
+
+            <!-- Modal -->
+
         </div>
 
     </div>
