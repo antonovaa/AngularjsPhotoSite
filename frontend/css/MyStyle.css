@@ -1,0 +1,27 @@
+.odd { background-color: #fafafa;}
+.even { background-color: silver}
+.focus{
+
+    font-size: 15px;
+    border: 2px solid #0636ff;
+    background-color: #ffe400;
+    color:red;
+
+}
+.unFocus{
+    border: 2px solid #0a3cff;
+    background-color: yellow;
+    color: yellow;
+
+}
+
+.myAppH {
+    visibility: hidden;
+    opacity:0;
+    transition:visibility 0.3s linear,opacity 0.3s linear;
+}
+.myAppV {
+    visibility: visible;
+    opacity:1;
+    transition:all 0.5s linear;
+ }

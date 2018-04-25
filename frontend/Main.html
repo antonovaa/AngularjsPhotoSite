@@ -1,0 +1,34 @@
+<div id="mainPhoto" class="container-fluid" on-scroll-to-bottom="test($event)">
+
+    <div class="row myDiv">
+    <div class="col-3" style="border: 2px solid #5cb85c">
+    </div>
+    <div class="col-9 myDiv " style="border: 2px solid #101112">
+
+        <div ng-repeat="t in cp track by $index">
+                <img class="myDiv" src="{{t}}" style="width: 1000px">
+        </div>
+    </div>
+    </div>
+
+    <div class="modal" id="exampleModal"  aria-hidden="true" style="z-index: 12">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    asdasdasdasdasd
+                    asd
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" ng-click="visibleModal(0)">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

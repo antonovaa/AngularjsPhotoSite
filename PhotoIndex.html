@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="includeExample">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="frontend/css/lib/bootstrap.min.css">
+    <!--<link href="css/lib/bootstrap-grid.min.css">-->
+    <link rel="stylesheet" href="frontend/css/MyStyle.css">
+    <script src="frontend/js/lib/angular.min.js"></script>
+    <script src="frontend/js/controllers/ModuleApp.js"></script>
+    <script src="frontend/js/controllers/HeaderController.js"></script>
+    <script src="frontend/js/controllers/NavigationController.js"></script>
+    <script src="frontend/js/controllers/MainController.js"></script>
+    <!--<script src="js/controllers/TestRootScopeController.js"></script>-->
+</head>
+<body>
+
+<div ng-controller="HeaderController">
+        <div id="Header" ng-include="'frontend/Header.html'" class="fixed-top" style="height: 100px;border: 2px solid rebeccapurple;background: #ffffff"></div>
+</div>
+
+<div ng-controller="NavigationController">
+    <div id="Navigation" ng-include="'frontend/Navigation.html'" class="fixed-top" style="margin-top: 100px"></div>
+</div>
+
+<div ng-controller="MainController">
+    <div id="Main" ng-include="'frontend/Main.html'" ></div>
+</div>
+
+</body>
+</html>

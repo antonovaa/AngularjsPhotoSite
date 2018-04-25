@@ -1,0 +1,49 @@
+<!doctype html>
+<html ng-app="projectMao">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link href="css/lib/bootstrap.min.css">
+    <link href="css/MyStyle.css">
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/controllers/ModuleApp.js"></script>
+    <script src="js/controllers/TestSendController.js"></script>
+    <script src="js/controllers/TestRootScopeController.js"></script>
+</head>
+<body>
+
+
+<h1>Цитатник Мао</h1>
+<div ng-controller="TestRootScopeController">
+<p>Модуль: {{ mod2 }}</p>
+<p>Сообщение: {{ mod }}</p>
+    <input ng-model="temp" ng-focus="FocusTest($event)" ng-blur="FocusTest($event)" ng-class="questColorClass">
+    <input type="checkbox" ng-model="data.visible">Открыть/скрыть
+    <p ng-if="data.visible">Первый блок</p>
+    <p ng-if="!data.visible">Второй блок</p>
+    <input ng-model="temp">
+
+    <div ng-repeat="imgs in historyNg2 track by $index" >
+        <img src="{{imgs}}" style="width: 1000px">
+    </div>
+</div>
+
+<p>Модуль: {{ mod2 }}</p>
+<p>Сообщение: {{ mod }}</p>
+
+<div ng-controller="TestSendController">
+    <label>Добавьте цитату:</label><br />
+    <input type="text" name="name" ng-model="text" required><br />
+    <button ng-click="save()">Save</button>
+    <hr />
+    <p ng-repeat="te in historyNg track by $index">
+        {{te}}!
+    </p>
+    <p>Модуль: {{ moduleName2 }}</p>
+    <p>Сообщение: {{ modtest }}</p>
+</div>
+<p>Модуль: {{ mod2 }}</p>
+<p>Сообщение: {{ mod }}</p>
+</body>
+</html>
