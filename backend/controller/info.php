@@ -10,7 +10,7 @@ function get_angular_request_payload() {
 }
 
 $vars = get_angular_request_payload();
-$lets="../images/".$vars["dir"];
+$lets="../../images/".$vars["dir"];
 $files =opendir($lets);
 while (false !== ($file = readdir($files))) {
     if(pathinfo($file, PATHINFO_EXTENSION)=="jpg")

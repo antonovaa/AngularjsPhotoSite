@@ -6,6 +6,7 @@ ModuleApp2.controller('HeaderController', function ($scope, $rootScope, $http) {
     $rootScope.currentPage = '';
     $rootScope.cp = [];
     $rootScope.temptest = [];
+    $scope.butttons = [];
 
     // $scope.hiddenClass=$rootScope.headerHiddenClass;
 
@@ -16,7 +17,7 @@ ModuleApp2.controller('HeaderController', function ($scope, $rootScope, $http) {
         $rootScope.cp = [];
         $http
             .post(
-                'backend/info.php',
+                'backend/controller/info.php',
                 {dir: dir}
             )
             .then(function (response) {
@@ -28,17 +29,31 @@ ModuleApp2.controller('HeaderController', function ($scope, $rootScope, $http) {
     };
 
 
+    $scope.setAllButtons = function (dir) {
+        $http
+            .post(
+                'backend/controller/FoldersButtons.php'
+            )
+            .then(function (response) {
+                $rootScope.temptest = response.data;
+                response.data.forEach(function (fj, i) {
+                    $scope.butttons.push(fj);
+                });
+            })
+    };
+
+
     $scope.changeMain = function (e) {
 
-        if (e === 1) {
+        if (e === 0) {
             $scope.callMainController("test1");
             // $rootScope.currentPage="test1";
         }
-        if (e === 2) {
+        if (e === 1) {
             $scope.callMainController("test2");
             // $rootScope.currentPage="test2";
         }
-        if (e === 3) $rootScope.currentPage = "test3";
+        if (e === 2) $rootScope.currentPage = "test3";
     }
 
     $scope.visibleModal=function (e) {
@@ -51,8 +66,8 @@ ModuleApp2.controller('HeaderController', function ($scope, $rootScope, $http) {
             angular.element(document.querySelector('#exampleModal')).removeClass("modal-open");
 
         }
-    }
-
+    };
+    $scope.setAllButtons();
 
 });
 

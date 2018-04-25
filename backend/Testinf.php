@@ -14,7 +14,7 @@ header("HTTP/1.1 200 OK");
 
 /* рутину, связанную с работой с базой, 
    я спрятал в отдельный файл */
-require_once dirname(__FILE__) . '/db.php';
+require_once dirname(__FILE__) . 'dao/db.php';
 /* грузим данные, которые AngularJS шлет мимо $_POST 
    функция будет в самом низу :) */
 $vars = get_angular_request_payload();
